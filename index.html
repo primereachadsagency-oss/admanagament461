@@ -1,731 +1,363 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Pankaj Bhardwaj Way2Laab | Join 10,000+ Premium Members</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Join Pankaj Bhardwaj Way2Laab's exclusive Telegram community. 10,000+ members. Daily premium updates, learning resources & active discussions. 100% Free.">
-<meta name="theme-color" content="#050a0f">
-<meta property="og:title" content="Pankaj Bhardwaj Way2Laab | Premium Community">
-<meta property="og:description" content="Join 10,000+ members getting daily premium insights. 100% Free.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAY2LAABH STOCK SELECTION - Premium Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        body {
+            background: #020617;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-<style>
-:root {
-  --bg-deep: #050a0f;
-  --bg-card: rgba(12, 22, 31, 0.65);
-  --bg-card-light: rgba(17, 34, 51, 0.4);
-  --accent: #00ff9d;
-  --accent-light: #00e676;
-  --accent-glow: rgba(0, 255, 157, 0.3);
-  --accent-dim: rgba(0, 255, 157, 0.06);
-  --text-primary: #ffffff;
-  --text-secondary: #b0c4de;
-  --text-muted: #5a6b7e;
-  --border-subtle: rgba(255,255,255,0.08);
-  --border-accent: rgba(0, 255, 157, 0.35);
-  --glass-blur: 24px;
-  --danger: #ff4757;
-  --warning: #ffa502;
-}
+        #canvas-stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Outfit", sans-serif; -webkit-tap-highlight-color: transparent; }
-html { scroll-behavior: smooth; }
+        .ambient-glow {
+            position: absolute;
+            top: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(59, 130, 246, 0.2) 40%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            filter: blur(50px);
+            z-index: 1;
+            pointer-events: none;
+            animation: pulseGlow 5s ease-in-out infinite alternate;
+        }
 
-body {
-  min-height: 100vh;
-  background: var(--bg-deep);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-primary);
-  overflow-x: hidden;
-  position: relative;
-  padding: 20px 0 120px;
-}
+        @keyframes pulseGlow {
+            0% { opacity: 0.6; transform: translateX(-50%) scale(0.95); }
+            100% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+        }
 
-/* ===== Background Effects ===== */
-.bg-layer {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
-  background: radial-gradient(circle at 50% 0%, #0a1520 0%, var(--bg-deep) 60%);
-}
-.bg-layer .orb {
-  position: absolute; border-radius: 50%; filter: blur(120px);
-  animation: orbFloat 16s ease-in-out infinite alternate;
-}
-.bg-layer .orb:nth-child(1) { width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,255,157,0.14), transparent 70%); top: -200px; left: 20%; transform: translateX(-50%); }
-.bg-layer .orb:nth-child(2) { width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,230,118,0.06), transparent 70%); bottom: 10%; right: -80px; animation-delay: -4s; }
-.bg-layer .orb:nth-child(3) { width: 350px; height: 350px; background: radial-gradient(circle, rgba(105,240,174,0.05), transparent 70%); top: 40%; left: -80px; animation-delay: -8s; }
+        .glass-card-v2 {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
 
-@keyframes orbFloat {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(30px, -20px) scale(1.1); }
-  100% { transform: translate(-20px, 30px) scale(0.9); }
-}
+        .inner-feature-box {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(51, 65, 85, 0.7);
+            backdrop-filter: blur(12px);
+        }
 
-#particles { position: fixed; inset: 0; z-index: 1; pointer-events: none; }
+        .cta-btn-glow {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+            transition: all 0.3s ease;
+        }
 
-/* ===== Layout Container ===== */
-main {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 440px;
-  margin: 0 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+        .cta-btn-glow:hover {
+            box-shadow: 0 0 35px rgba(16, 185, 129, 0.6);
+            transform: translateY(-2px);
+        }
 
-/* ===== Urgency Banner ===== */
-.urgency-banner {
-  width: 100%;
-  padding: 10px 16px;
-  background: linear-gradient(90deg, rgba(255,71,87,0.15), rgba(255,165,2,0.15));
-  border: 1px solid rgba(255,165,2,0.3);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #ffd577;
-  animation: bannerPulse 2s ease-in-out infinite;
-}
-.urgency-banner .pulse-dot { width: 8px; height: 8px; background: var(--warning); border-radius: 50%; box-shadow: 0 0 10px var(--warning); animation: dotPulse 1s infinite; }
+        .fade-in-up {
+            animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
 
-@keyframes bannerPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255,165,2,0.3); }
-  50% { box-shadow: 0 0 20px 4px rgba(255,165,2,0.15); }
-}
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-/* ===== Main Glass Wrapper ===== */
-.wrapper {
-  background: var(--bg-card);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-radius: 32px;
-  padding: 40px 24px 30px;
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.05);
-  text-align: center;
-  animation: cardEntry 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@keyframes cardEntry {
-  from { opacity: 0; transform: translateY(40px) scale(0.95); filter: blur(10px); }
-  to   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-}
-
-/* ===== Profile Section ===== */
-.profile-wrap {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-}
-.profile-ring {
-  position: absolute; inset: -8px; border-radius: 50%;
-  background: conic-gradient(from 0deg, var(--accent), transparent 40%, var(--accent-light) 60%, transparent 90%, var(--accent));
-  animation: ringSpin 4s linear infinite; filter: blur(2px);
-}
-.profile-ring-inner {
-  position: absolute; inset: -3px; border-radius: 50%; background: var(--bg-deep); z-index: 1;
-}
-.profile {
-  width: 110px; height: 110px; border-radius: 50%; padding: 4px; background: var(--bg-deep); position: relative; z-index: 2;
-}
-.profile img {
-  width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;
-}
-.badge {
-  position: absolute; bottom: 5px; right: 5px; background: var(--accent); color: #04120b;
-  width: 28px; height: 28px; border-radius: 50%; border: 3px solid var(--bg-deep);
-  display: flex; align-items: center; justify-content: center; z-index: 3; box-shadow: 0 4px 10px var(--accent-glow);
-}
-@keyframes ringSpin { to { transform: rotate(360deg); } }
-
-/* ===== Typography ===== */
-h1 {
-  font-size: 22px; font-weight: 700; letter-spacing: 1.5px; line-height: 1.4; text-transform: uppercase;
-  background: linear-gradient(180deg, #ffffff 0%, #b0c4de 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-h1 span {
-  font-weight: 300; letter-spacing: 4px; display: block; margin-top: 4px; font-size: 16px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-
-.desc {
-  font-size: 14px; color: var(--text-secondary); line-height: 1.6; font-weight: 300; padding: 0 10px;
-}
-
-.live-badge {
-  display: inline-flex; align-items: center; gap: 6px; margin: 0 auto;
-  padding: 6px 12px; background: rgba(0,255,157,0.08); border: 1px solid var(--border-accent);
-  border-radius: 100px; font-size: 11px; font-weight: 500; color: var(--accent-light); letter-spacing: 0.5px;
-}
-.live-badge .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent); animation: dotPulse 2s infinite; }
-
-@keyframes dotPulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.8); }
-}
-
-/* ===== Main CTA ===== */
-.cta-main { position: relative; }
-.cta-main a {
-  display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
-  padding: 18px 22px; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; border-radius: 16px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: #04120b; text-decoration: none;
-  box-shadow: 0 8px 24px var(--accent-glow), 0 0 0 1px rgba(0,255,157,0.5);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden;
-  animation: ctaPulse 2.5s ease-in-out infinite;
-}
-@keyframes ctaPulse {
-  0%, 100% { box-shadow: 0 8px 24px var(--accent-glow), 0 0 0 1px rgba(0,255,157,0.5), 0 0 0 0 rgba(0,255,157,0.4); }
-  50% { box-shadow: 0 8px 24px var(--accent-glow), 0 0 0 1px rgba(0,255,157,0.5), 0 0 0 12px rgba(0,255,157,0); }
-}
-.cta-main a::before {
-  content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent); transition: left 0.6s ease;
-}
-.cta-main a:hover::before { left: 100%; }
-.cta-main a:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,255,157,0.5); }
-.cta-main a:active { transform: translateY(0) scale(0.98); }
-.cta-icon { width: 22px; height: 22px; flex-shrink: 0; }
-
-.cta-subtext {
-  margin-top: 4px; font-size: 11px; color: var(--text-muted); font-weight: 400;
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-}
-.cta-subtext svg { width: 12px; height: 12px; color: var(--accent); }
-
-/* ===== Feature Cards ===== */
-.features { display: flex; flex-direction: column; gap: 10px; text-align: left; }
-.feature {
-  background: var(--bg-card-light); border: 1px solid var(--border-subtle); border-radius: 14px;
-  padding: 14px 16px; display: flex; align-items: center; gap: 14px;
-  transition: all 0.3s ease; backdrop-filter: blur(10px);
-  opacity: 0; transform: translateX(-20px);
-  animation: slideIn 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
-}
-.feature:nth-child(1) { animation-delay: 0.3s; }
-.feature:nth-child(2) { animation-delay: 0.4s; }
-.feature:nth-child(3) { animation-delay: 0.5s; }
-
-@keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
-.feature:hover { background: rgba(0, 255, 157, 0.04); border-color: var(--border-accent); transform: translateX(4px); }
-
-.feature-icon {
-  flex-shrink: 0; width: 40px; height: 40px; border-radius: 12px; background: var(--accent-dim);
-  border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center; font-size: 18px;
-}
-.feature-text h3 { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 2px; }
-.feature-text p { font-size: 12px; color: var(--text-muted); font-weight: 300; }
-
-/* ===== Testimonial ===== */
-.testimonial {
-  padding: 16px; background: rgba(0,255,157,0.03); border: 1px solid var(--border-accent);
-  border-radius: 14px; text-align: left; position: relative;
-}
-.testimonial-quote { font-size: 13px; color: var(--text-secondary); line-height: 1.5; font-style: italic; font-weight: 300; }
-.testimonial-author { margin-top: 10px; display: flex; align-items: center; gap: 8px; }
-.testimonial-author .stars { color: var(--warning); font-size: 11px; letter-spacing: 1px; }
-.testimonial-author .name { font-size: 12px; font-weight: 600; color: #fff; }
-.testimonial-author .role { font-size: 10px; color: var(--text-muted); }
-
-/* ===== Secondary Row ===== */
-.cta-row { display: flex; gap: 10px; }
-.cta-secondary, .copy-btn { flex: 1; }
-.cta-secondary a, .copy-btn {
-  display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 8px;
-  font-size: 12px; font-weight: 500; border-radius: 10px; text-decoration: none;
-  transition: all 0.3s ease; cursor: pointer; font-family: "Outfit", sans-serif;
-  border: 1px solid var(--border-subtle); background: transparent;
-}
-.cta-secondary a { color: var(--accent-light); border-color: var(--border-accent); }
-.cta-secondary a:hover { background: var(--accent-dim); transform: translateY(-2px); }
-.copy-btn { color: var(--text-secondary); }
-.copy-btn:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); transform: translateY(-2px); }
-.copy-btn.copied { background: var(--accent-dim); border-color: var(--border-accent); color: var(--accent-light); }
-
-/* ===== Trust & Stats ===== */
-.trust-stats {
-  padding: 18px 16px; background: rgba(255,255,255,0.02); border-radius: 14px;
-  border: 1px solid var(--border-subtle); display: flex; justify-style: space-around; align-items: center;
-}
-.stat-item { text-align: center; }
-.stat-num {
-  font-size: 20px; font-weight: 800; color: #fff; display: block;
-  background: linear-gradient(180deg, #fff, var(--accent-light));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.stat-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-.divider { width: 1px; height: 28px; background: var(--border-subtle); }
-
-/* ===== Footer ===== */
-.footer {
-  font-size: 11px; color: var(--text-muted); font-weight: 300;
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-}
-.footer .live-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent); animation: dotPulse 2s infinite; }
-
-/* ===== Sticky Mobile CTA ===== */
-.sticky-cta {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
-  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-  background: rgba(5,10,15,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid var(--border-subtle); transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
-}
-.sticky-cta.visible { transform: translateY(0); }
-.sticky-cta a {
-  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; max-width: 440px; margin: 0 auto;
-  padding: 14px 22px; font-size: 15px; font-weight: 700; border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: #04120b; text-decoration: none;
-  box-shadow: 0 8px 24px var(--accent-glow); transition: transform 0.2s ease;
-}
-.sticky-cta a:active { transform: scale(0.98); }
-
-/* ===== Toast Notifications ===== */
-.toast-container {
-  position: fixed; bottom: 90px; left: 16px; z-index: 99;
-  display: flex; flex-direction: column; gap: 8px; pointer-events: none;
-}
-.toast {
-  background: rgba(12,22,31,0.95); backdrop-filter: blur(20px); border: 1px solid var(--border-accent);
-  border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px;
-  font-size: 12px; color: var(--text-primary); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  animation: toastIn 0.5s cubic-bezier(0.16,1,0.3,1), toastOut 0.5s ease 4s forwards; max-width: 280px;
-}
-.toast .avatar {
-  width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-light));
-  display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: #04120b; flex-shrink: 0;
-}
-.toast .info { line-height: 1.3; }
-.toast .info b { color: var(--accent-light); }
-.toast .info .time { font-size: 10px; color: var(--text-muted); }
-
-@keyframes toastIn { from { opacity: 0; transform: translateX(-100%); } to { opacity: 1; transform: translateX(0); } }
-@keyframes toastOut { to { opacity: 0; transform: translateX(-100%); } }
-
-/* =========================================
-   DESKTOP / PC LAYOUT (Two-Column Split)
-   ========================================= */
-@media (min-width: 820px) {
-  body { align-items: center; padding: 40px 20px; }
-  main { max-width: 1000px; }
-  .urgency-banner { max-width: 400px; margin: 0 auto; }
-  
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Left side wider than right */
-    gap: 50px;
-    padding: 50px;
-    text-align: left;
-    align-items: center;
-  }
-
-  /* Remove center alignments for desktop split view */
-  .profile-wrap { margin: 0; }
-  .live-badge { margin: 0; }
-  .features { align-self: center; }
-
-  /* Right Column Specifics */
-  .cta-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid var(--border-subtle);
-    padding: 30px;
-    border-radius: 20px;
-  }
-
-  .cta-main a { width: 100%; }
-  .cta-subtext { justify-content: flex-start; }
-
-  h1 { font-size: 32px; line-height: 1.3; }
-  .desc { font-size: 16px; padding: 0; padding-right: 40px; }
-  .profile { width: 130px; height: 130px; }
-  
-  /* Hide sticky CTA on desktop as the main CTA is always visible */
-  .sticky-cta { display: none; }
-  body { padding-bottom: 40px; }
-  
-  .toast-container { bottom: 30px; left: 30px; }
-}
-
-@media (max-width: 819px) {
-  /* Keep mobile structure intact, no grid changes */
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-</style>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1406020781561840');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1406020781561840&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+        /* Modal Styles */
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '946859917688163');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=946859917688163&ev=PageView&noscript=1"
+    /></noscript>
 </head>
-<body>
+<body class="flex justify-center items-center py-8 px-4">
 
-<div class="bg-layer" aria-hidden="true">
-  <div class="orb"></div>
-  <div class="orb"></div>
-  <div class="orb"></div>
-</div>
+    <canvas id="canvas-stars"></canvas>
+    <div class="ambient-glow"></div>
 
-<canvas id="particles" aria-hidden="true"></canvas>
-
-<main>
-  <!-- Urgency Banner -->
-  <div class="urgency-banner">
-    <span class="pulse-dot"></span>
-    <span>Limited Free Access • Closing Soon</span>
-  </div>
-
-  <div class="wrapper">
-
-    <!-- LEFT COLUMN: Brand & Content (Shows side-by-side on Desktop, top on Mobile) -->
-    <div class="content-left">
-      <!-- Profile -->
-      <div class="profile-wrap">
-        <div class="profile-ring"></div>
-        <div class="profile-ring-inner"></div>
-        <div class="profile">
-          <img src="https://lp2.digitaladsexpert.in/wp-content/uploads/2026/03/pbj.jpg" alt="Pankaj Bhardwaj" loading="eager">
+    <div class="relative z-10 w-full max-w-[400px] glass-card-v2 rounded-[36px] p-6 text-center fade-in-up">
+        
+        <!-- Live Alert Banner -->
+        <div class="flex items-center justify-between bg-slate-900/90 border border-slate-700/60 rounded-full py-1.5 px-3 mb-6 text-[11px] font-semibold text-slate-300">
+            <span class="flex items-center gap-1.5">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                Live Market Signals
+            </span>
+            <span class="text-emerald-400 font-bold">5,000+ Active Traders</span>
         </div>
-        <div class="badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
+        <!-- Avatar & Brand Header -->
+        <div class="relative flex justify-center mb-4">
+            <div class="p-[3px] rounded-full bg-gradient-to-tr from-emerald-500 via-blue-500 to-indigo-500 shadow-xl">
+                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-slate-950 bg-slate-900">
+                    <img src="way2labh.jpeg" alt="WAY2LAABH" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="absolute bottom-1 right-1/2 translate-x-9 bg-emerald-500 text-slate-950 w-6 h-6 rounded-full flex items-center justify-center border-2 border-slate-950 text-[11px] font-black shadow-md">
+                <i class="fa-solid fa-check"></i>
+            </div>
         </div>
-      </div>
 
-      <h1>Pankaj Bhardwaj<span>WAY2LAABH™</span></h1>
+        <h1 class="text-2xl font-black tracking-tight text-white uppercase mb-0.5">
+            WAY2LAABH
+        </h1>
+        <h2 class="text-sm font-extrabold tracking-widest text-emerald-400 uppercase mb-4">
+            Stock Selection & Market Intelligence
+        </h2>
 
-      <p class="desc">
-        Join an exclusive ecosystem of <b style="color:#fff">10,000+ members</b> getting daily premium insights, learning resources, and networking with active professionals.
-      </p>
-
-      <div class="live-badge" style="margin-top: 15px;">
-        <span class="dot"></span>
-        <span id="liveCount">247</span> people viewing now
-      </div>
-
-      <!-- Feature cards -->
-      <div class="features" style="margin-top: 20px;">
-        <div class="feature">
-          <span class="feature-icon">🔥</span>
-          <div class="feature-text">
-            <h3>Daily Premium Updates</h3>
-            <p>Fresh, high-value content delivered every single day.</p>
-          </div>
+        <!-- Tags Badge -->
+        <div class="flex flex-wrap justify-center gap-1.5 mb-6">
+            <span class="bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-[10px] font-bold px-3 py-1 rounded-full">NIFTY</span>
+            <span class="bg-blue-950/60 border border-blue-500/30 text-blue-300 text-[10px] font-bold px-3 py-1 rounded-full">BANKNIFTY</span>
+            <span class="bg-purple-950/60 border border-purple-500/30 text-purple-300 text-[10px] font-bold px-3 py-1 rounded-full">OPTIONS</span>
         </div>
-        <div class="feature">
-          <span class="feature-icon">📚</span>
-          <div class="feature-text">
-            <h3>Exclusive Learning Resources</h3>
-            <p>Easy-to-digest material to accelerate your growth.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <span class="feature-icon">🤝</span>
-          <div class="feature-text">
-            <h3>Active Community Network</h3>
-            <p>Connect with thousands of driven professionals.</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- RIGHT COLUMN: Action & Conversion (Shows side-by-side on Desktop, bottom on Mobile) -->
-    <div class="cta-wrapper">
-      <!-- Main CTA -->
-      <div class="cta-main">
-        <a href="https://t.me/+so3mwHYA5_00YzE9" target="_blank" rel="noopener" onclick="trackSubscribe('main')">
-          <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.891-.663 3.498-1.524 5.83-2.529 6.997-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          Join Free Telegram Channel →
+        <!-- Primary CTA Button (Updated Link) -->
+        <a href="https://t.me/+so3mwHYA5_00YzE9" target="_blank" onclick="trackSubscribeEvent()" class="cta-btn-glow flex items-center justify-center gap-3 text-slate-950 font-black py-4 px-6 rounded-2xl w-full text-base mb-6 active:scale-95 transition-all uppercase tracking-wide">
+            <i class="fa-brands fa-telegram text-xl"></i>
+            <span>Join Free Telegram</span>
+            <i class="fa-solid fa-arrow-right text-sm"></i>
         </a>
-        <div class="cta-subtext">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-          Instant access • No spam • 100% Free
-        </div>
-      </div>
 
-      <!-- Testimonial -->
-      <div class="testimonial">
-        <p class="testimonial-quote">"Joined 3 months back and the daily insights are absolute gold. Best free community I've ever been part of."</p>
-        <div class="testimonial-author">
-          <div>
-            <div class="stars">★★★★★</div>
-            <span class="name">Rahul M.</span> <span class="role">• Member since 2025</span>
-          </div>
-        </div>
-      </div>
+        <!-- Key Highlights Box -->
+        <div class="inner-feature-box rounded-2xl p-4 mb-6 text-left">
+            <div class="flex items-center justify-between mb-3 pb-2.5 border-b border-slate-700/50">
+                <span class="text-xs font-black uppercase text-slate-300 tracking-wider">Market Intelligence</span>
+                <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full font-bold">Accuracy High</span>
+            </div>
 
-      <!-- Stats / Social Proof -->
-      <div class="trust-stats">
-        <div class="stat-item">
-          <span class="stat-num" data-target="10000" data-suffix="+">0</span>
-          <span class="stat-label">Members</span>
-        </div>
-        <div class="divider"></div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="4.9" data-suffix="★" data-decimals="1">0</span>
-          <span class="stat-label">Rating</span>
-        </div>
-        <div class="divider"></div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="100" data-suffix="%">0</span>
-          <span class="stat-label">Free</span>
-        </div>
-      </div>
+            <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
+                        <i class="fa-solid fa-chart-line text-xs"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-100">100 - 300 Points Daily Target</p>
+                        <p class="text-[11px] text-slate-400">High-conviction observational index moves</p>
+                    </div>
+                </div>
 
-      <!-- Secondary row -->
-      <div class="cta-row">
-        <div class="cta-secondary">
-          <a href="tg://join?invite=so3mwHYA5_00YzE9" onclick="trackSubscribe('app')">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Open App
-          </a>
-        </div>
-        <button class="copy-btn" id="copyBtn" onclick="copyLink()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          <span id="copyText">Copy Link</span>
-        </button>
-      </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0 mt-0.5">
+                        <i class="fa-solid fa-bullseye text-xs"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-100">80% - 90% Accuracy Rate</p>
+                        <p class="text-[11px] text-slate-400">Data-backed trade setups & analysis</p>
+                    </div>
+                </div>
 
-      <div class="footer">
-        <span class="live-dot"></span>
-        Online Now • Premium Community 2026
-      </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 mt-0.5">
+                        <i class="fa-solid fa-gift text-xs"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-100">Daily Free Demo Calls</p>
+                        <p class="text-[11px] text-slate-400">3-4 observational trade setups daily</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-700/50 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+                <span><i class="fa-solid fa-bolt text-amber-400 mr-1"></i> FII / DII Live Data</span>
+                <span><i class="fa-solid fa-lock text-emerald-400 mr-1"></i> 100% Free Access</span>
+            </div>
+        </div>
+
+        <!-- Secondary CTA (Updated Link) -->
+        <a href="https://t.me/+so3mwHYA5_00YzE9" target="_blank" onclick="trackSubscribeEvent()" class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 px-6 rounded-xl w-full text-sm mb-5 border border-slate-700 transition-all">
+            <span>GET INSTANT ACCESS NOW</span>
+            <i class="fa-solid fa-bolt text-amber-400"></i>
+        </a>
+
+        <!-- Footer Links & Popup Triggers -->
+        <div class="border-t border-slate-800/80 pt-4">
+            <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[11px] text-slate-400 font-semibold mb-3">
+                <button onclick="openModal('about')" class="hover:text-emerald-400 transition-colors">About Us</button>
+                <span>•</span>
+                <button onclick="openModal('terms')" class="hover:text-emerald-400 transition-colors">Terms & Conditions</button>
+                <span>•</span>
+                <button onclick="openModal('disclaimer')" class="hover:text-emerald-400 transition-colors">Disclaimer</button>
+                <span>•</span>
+                <button onclick="openModal('contact')" class="hover:text-emerald-400 transition-colors">Contact Us</button>
+            </div>
+            
+            <div class="inline-flex items-center gap-1.5 text-[10px] text-slate-500 font-medium mb-1">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                <span>Meta Pixel Active (ID: 1720478142456221)</span>
+            </div>
+            <p class="text-[10px] text-slate-600">
+                © WAY2LAABH STOCK SELECTION — All Rights Reserved
+            </p>
+        </div>
+
     </div>
 
-  </div>
-</main>
+    <!-- Popup Modal Component -->
+    <div id="infoModal" class="modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="relative w-full max-w-md bg-slate-900 border border-slate-700 rounded-3xl p-6 text-left shadow-2xl max-h-[80vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
-<!-- Sticky Mobile CTA -->
-<div class="sticky-cta" id="stickyCta">
-  <a href="https://t.me/+so3mwHYA5_00YzE9" target="_blank" rel="noopener" onclick="trackSubscribe('sticky')">
-    <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.324-.437.891-.663 3.498-1.524 5.83-2.529 6.997-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-    Join Free Now →
-  </a>
-</div>
+            <!-- Dynamic Content Container -->
+            <div id="modalContent"></div>
+        </div>
+    </div>
 
-<!-- Toast Container -->
-<div class="toast-container" id="toastContainer"></div>
+    <script>
+        // Modal Logic
+        const modalData = {
+            about: `
+                <h3 class="text-lg font-black text-emerald-400 mb-2">About Us</h3>
+                <p class="text-slate-300 text-xs leading-relaxed mb-3">WAY2LAABH Stock Selection market analytics aur intelligence support provide karta hai. Hum stock options, Nifty, aur BankNifty ki deep market analysis share karte hain taaki traders informative decisions le sakein.</p>
+                <p class="text-slate-400 text-xs leading-relaxed">Hamara mission trader community ko live updates aur qualitative research-backed data se empower karna hai.</p>
+            `,
+            terms: `
+                <h3 class="text-lg font-black text-emerald-400 mb-2">Terms & Conditions</h3>
+                <p class="text-slate-300 text-xs leading-relaxed mb-2">1. Sabhi updates aur posts sirf educational aur informational purpose ke liye hain.</p>
+                <p class="text-slate-300 text-xs leading-relaxed mb-2">2. Hum kisi bhi tarah ke guaranteed profit ka claim nahi karte.</p>
+                <p class="text-slate-300 text-xs leading-relaxed">3. Telegram channel ya website ki information par trade karne se pehle apne financial advisor se salah zaroor lein.</p>
+            `,
+            disclaimer: `
+                <h3 class="text-lg font-black text-emerald-400 mb-2">Disclaimer</h3>
+                <p class="text-slate-300 text-xs leading-relaxed mb-3">Stock trading aur options trading me high financial risk shamil hota hai. Aap apna poora capital bhi kho sakte hain.</p>
+                <p class="text-slate-300 text-xs leading-relaxed">Hum SEBI registered advisor NAHI hain. Hamari sari calls aur analysis sirf educational purpose ke liye hain. Kisi bhi loss ke liye WAY2LAABH zimmedar nahi hoga.</p>
+            `,
+            contact: `
+                <h3 class="text-lg font-black text-emerald-400 mb-2">Contact Us</h3>
+                <p class="text-slate-300 text-xs leading-relaxed mb-3">Kisi bhi query ya support ke liye aap humse Telegram par contact kar sakte hain:</p>
+                <a href="https://t.me/+so3mwHYA5_00YzE9" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-xs px-4 py-2 rounded-xl font-bold">
+                    <i class="fa-brands fa-telegram"></i> Official Support Telegram
+                </a>
+            `
+        };
 
-<script>
-var TG_WEB = "https://t.me/+so3mwHYA5_00YzE9";
+        function openModal(type) {
+            document.getElementById('modalContent').innerHTML = modalData[type];
+            document.getElementById('infoModal').classList.add('active');
+        }
 
-/* Pixel Events with placement tracking */
-function trackSubscribe(placement) {
-  if (typeof fbq === "function") {
-    fbq("track", "Lead", { placement: placement || "unknown" });
-    fbq("track", "Subscribe", { placement: placement || "unknown" });
-  }
-  if (typeof gtag === "function") {
-    gtag("event", "join_click", { placement: placement });
-  }
-}
+        function closeModal() {
+            document.getElementById('infoModal').classList.remove('active');
+        }
 
-/* Copy Link */
-function copyLink() { 
-  doCopy(TG_WEB, document.getElementById("copyBtn")); 
-}
+        // Close on background click
+        document.getElementById('infoModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
 
-function doCopy(text, btn) {
-  var textEl = document.getElementById("copyText");
-  var done = function() {
-    btn.classList.add("copied");
-    textEl.textContent = "Copied!";
-    setTimeout(function() { 
-      btn.classList.remove("copied"); 
-      textEl.textContent = "Copy Link";
-    }, 2000);
-  };
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(done).catch(function() { fbCopy(text, btn, done); });
-  } else {
-    fbCopy(text, btn, done);
-  }
-}
+        // Pixel tracking function
+        function trackSubscribeEvent() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Subscribe', {
+                    value: '0.00',
+                    currency: 'INR',
+                    predicted_ltv: '0.00'
+                });
+            }
+        }
 
-function fbCopy(text, btn, done) {
-  var t = document.createElement("textarea");
-  t.value = text;
-  t.style.cssText = "position:fixed;left:-9999px";
-  document.body.appendChild(t);
-  t.select();
-  try { document.execCommand("copy"); done(); } catch(e) { btn.textContent = "Failed"; }
-  document.body.removeChild(t);
-}
+        // Stars Background Animation
+        const canvas = document.getElementById('canvas-stars');
+        const ctx = canvas.getContext('2d');
+        let width, height, stars = [];
 
-/* Count-up animation for stats */
-function animateCount(el) {
-  var target = parseFloat(el.getAttribute("data-target"));
-  var suffix = el.getAttribute("data-suffix") || "";
-  var decimals = parseInt(el.getAttribute("data-decimals") || "0");
-  var duration = 1800;
-  var start = performance.now();
-  
-  function step(now) {
-    var progress = Math.min((now - start) / duration, 1);
-    var eased = 1 - Math.pow(1 - progress, 3);
-    var value = target * eased;
-    el.textContent = value.toFixed(decimals) + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = target.toFixed(decimals) + suffix;
-  }
-  requestAnimationFrame(step);
-}
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initStars();
+        }
 
-var statsObserver = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) {
-      animateCount(entry.target);
-      statsObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
+        function initStars() {
+            stars = [];
+            const count = Math.floor((width * height) / 3500);
+            for (let i = 0; i < count; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 1.2 + 0.3,
+                    alpha: Math.random(),
+                    speed: Math.random() * 0.01 + 0.005,
+                    twinkleDir: Math.random() > 0.5 ? 1 : -1,
+                    color: ['#ffffff', '#6ee7b7', '#93c5fd'][Math.floor(Math.random() * 3)]
+                });
+            }
+        }
 
-document.querySelectorAll(".stat-num").forEach(function(el) { statsObserver.observe(el); });
+        function animateStars() {
+            ctx.clearRect(0, 0, width, height);
+            stars.forEach(star => {
+                star.alpha += star.speed * star.twinkleDir;
+                if (star.alpha >= 0.85) star.twinkleDir = -1;
+                if (star.alpha <= 0.15) star.twinkleDir = 1;
+                star.y -= star.speed * 12;
+                if (star.y < 0) {
+                    star.y = height;
+                    star.x = Math.random() * width;
+                }
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = star.color;
+                ctx.globalAlpha = Math.max(0, Math.min(1, star.alpha));
+                ctx.fill();
+            });
+            requestAnimationFrame(animateStars);
+        }
 
-/* Live viewer count fluctuation */
-var liveCountEl = document.getElementById("liveCount");
-var liveCount = 247;
-setInterval(function() {
-  var delta = Math.floor(Math.random() * 7) - 3;
-  liveCount = Math.max(180, Math.min(320, liveCount + delta));
-  liveCountEl.textContent = liveCount;
-}, 4000);
-
-/* Sticky CTA visibility (Mobile only) */
-var stickyCta = document.getElementById("stickyCta");
-var mainCta = document.querySelector(".cta-main");
-window.addEventListener("scroll", function() {
-  var rect = mainCta.getBoundingClientRect();
-  if (rect.bottom < 0) stickyCta.classList.add("visible");
-  else stickyCta.classList.remove("visible");
-});
-
-/* Toast notifications - social proof */
-var names = [
-  ["A", "Aarav", "Delhi"], ["P", "Priya", "Mumbai"], ["R", "Rahul", "Bangalore"],
-  ["S", "Sneha", "Pune"], ["V", "Vikram", "Hyderabad"], ["A", "Anjali", "Chennai"],
-  ["K", "Karan", "Jaipur"], ["M", "Meera", "Kolkata"], ["D", "Deepak", "Lucknow"],
-  ["N", "Nisha", "Ahmedabad"], ["R", "Rohit", "Surat"], ["T", "Tanya", "Indore"]
-];
-
-function showToast() {
-  var n = names[Math.floor(Math.random() * names.length)];
-  var mins = Math.floor(Math.random() * 5) + 1;
-  var toast = document.createElement("div");
-  toast.className = "toast";
-  toast.innerHTML = 
-    '<div class="avatar">' + n[0] + '</div>' +
-    '<div class="info"><b>' + n[1] + '</b> from ' + n[2] + ' joined<br><span class="time">' + mins + ' min ago</span></div>';
-  document.getElementById("toastContainer").appendChild(toast);
-  setTimeout(function() { toast.remove(); }, 5000);
-}
-
-/* Show first toast after 3s, then random intervals */
-setTimeout(function() {
-  showToast();
-  setInterval(function() {
-    if (Math.random() > 0.3) showToast();
-  }, 8000);
-}, 3000);
-
-/* Optimized Particles System */
-(function() {
-  var c = document.getElementById("particles");
-  var ctx = c.getContext("2d");
-  var pts = [];
-  var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  
-  function resize() { 
-    c.width = innerWidth * dpr; 
-    c.height = innerHeight * dpr;
-    c.style.width = innerWidth + "px";
-    c.style.height = innerHeight + "px";
-    ctx.scale(dpr, dpr);
-  }
-  resize();
-  addEventListener("resize", resize);
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  function P() { this.r(); }
-  P.prototype.r = function() {
-    this.x = Math.random() * innerWidth;
-    this.y = Math.random() * innerHeight;
-    this.s = Math.random() * 1.5 + 0.5;
-    this.dx = (Math.random() - 0.5) * 0.2;
-    this.dy = (Math.random() - 0.5) * 0.2;
-    this.o = Math.random() * 0.3 + 0.05;
-    this.p = Math.random() * 6.28;
-    this.ps = Math.random() * 0.01 + 0.005;
-  };
-  P.prototype.u = function() {
-    this.x += this.dx; this.y += this.dy; this.p += this.ps;
-    if (this.x < -10 || this.x > innerWidth + 10 || this.y < -10 || this.y > innerHeight + 10) this.r();
-  };
-  P.prototype.d = function() {
-    var a = this.o * (0.5 + 0.5 * Math.sin(this.p));
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, Math.max(0.1, this.s), 0, 6.28);
-    ctx.fillStyle = "rgba(0,255,157," + a + ")";
-    ctx.shadowBlur = 8;
-    ctx.shadowColor = "rgba(0,255,157,0.5)";
-    ctx.fill();
-  };
-
-  var count = innerWidth < 820 ? 18 : 45; // More particles on desktop
-  for (var i = 0; i < count; i++) pts.push(new P());
-  
-  var running = true;
-  document.addEventListener("visibilitychange", function() {
-    running = !document.hidden;
-    if (running) loop();
-  });
-  
-  function loop() {
-    if (!running) return;
-    ctx.clearRect(0, 0, innerWidth, innerHeight);
-    for (var i = 0; i < pts.length; i++) { pts[i].u(); pts[i].d(); }
-    requestAnimationFrame(loop);
-  }
-  loop();
-})();
-</script>
-
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+        animateStars();
+    </script>
 </body>
 </html>
